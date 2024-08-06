@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://q5b81d607g4o"]
+
+[ext_resource type="Texture2D" uid="uid://dlv467noopl4t" path="res://Assets/Images/Tiles/Floor.png" id="1_lrh4q"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t8j0s"]
+texture = ExtResource("1_lrh4q")
+0:0/0 = 0
+0:1/0 = 0
+0:2/0 = 0
+0:3/0 = 0
+0:4/0 = 0
+0:5/0 = 0
+0:6/0 = 0
+0:7/0 = 0
+0:8/0 = 0
+0:9/0 = 0
+0:10/0 = 0
+0:11/0 = 0
+0:12/0 = 0
+0:13/0 = 0
+0:14/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_x3aym"]
+sources/1 = SubResource("TileSetAtlasSource_t8j0s")
+
+[node name="FloorTileset" type="TileMap"]
+texture_filter = 1
+tile_set = SubResource("TileSet_x3aym")
+format = 2

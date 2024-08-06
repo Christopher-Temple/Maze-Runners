@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bq1883whtaljo"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/Sprites/ZoomBuff.gd" id="1_15mk6"]
+[ext_resource type="Texture2D" uid="uid://ce714jnjhq4lb" path="res://Assets/Images/Sprites/SmallBlueCheese.png" id="2_gyjbg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c5mss"]
+size = Vector2(13, 8)
+
+[node name="ZoomBuff" type="Area2D"]
+script = ExtResource("1_15mk6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_gyjbg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 1)
+shape = SubResource("RectangleShape2D_c5mss")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

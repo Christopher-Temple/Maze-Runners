@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://810ylxq1w21r"
+path="res://.godot/imported/Almost Out.mp3-0faa5ace0ed0fe78c079029b4c31c9db.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sfx/Almost Out.mp3"
+dest_files=["res://.godot/imported/Almost Out.mp3-0faa5ace0ed0fe78c079029b4c31c9db.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

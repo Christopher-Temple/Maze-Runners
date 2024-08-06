@@ -1,0 +1,64 @@
+[gd_scene load_steps=3 format=3 uid="uid://vqxgl4fenxra"]
+
+[ext_resource type="Script" path="res://Assets/Scenes/Menus/player_one_wins.gd" id="1_de5ex"]
+[ext_resource type="Theme" uid="uid://cyvuq0oiuvgij" path="res://Assets/Fonts/MyTheme.tres" id="2_tws48"]
+
+[node name="PlayerOneWins" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_de5ex")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -21.0
+offset_top = -20.0
+offset_right = 1177.0
+offset_bottom = 666.0
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 212.0
+offset_top = 101.0
+offset_right = 917.0
+offset_bottom = 188.0
+theme = ExtResource("2_tws48")
+theme_override_colors/default_color = Color(0.984314, 1, 0, 1)
+theme_override_font_sizes/normal_font_size = 80
+text = "Player One Wins!"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 449.0
+offset_top = 244.0
+offset_right = 707.0
+offset_bottom = 325.0
+theme = ExtResource("2_tws48")
+text = "Current Score"
+
+[node name="P2Score" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 676.0
+offset_top = 338.0
+offset_right = 934.0
+offset_bottom = 419.0
+theme = ExtResource("2_tws48")
+
+[node name="P1Score" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 193.0
+offset_top = 338.0
+offset_right = 451.0
+offset_bottom = 419.0
+theme = ExtResource("2_tws48")
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

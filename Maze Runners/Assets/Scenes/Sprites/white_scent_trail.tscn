@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://df0bkfhq5pubg"]
+
+[ext_resource type="Texture2D" uid="uid://5po7juslre3e" path="res://Assets/Images/Sprites/WhiteTrail.png" id="1_srqi6"]
+[ext_resource type="Script" path="res://Assets/Scripts/Sprites/WhiteScentTrail.gd" id="2_2syqb"]
+
+[node name="WhiteScentTrail" type="Sprite2D"]
+visibility_layer = 4
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("1_srqi6")
+script = ExtResource("2_2syqb")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

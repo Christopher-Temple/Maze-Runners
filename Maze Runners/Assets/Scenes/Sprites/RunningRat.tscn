@@ -1,0 +1,68 @@
+[gd_scene load_steps=9 format=3 uid="uid://b0m0teirjwkyi"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/Sprites/RunningRat.gd" id="1_lwcge"]
+[ext_resource type="Texture2D" uid="uid://bp6ien57axlai" path="res://Assets/Images/Rats/White.png" id="1_ora2m"]
+
+[sub_resource type="Curve2D" id="Curve2D_rros3"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 164, 2.66666, 0, 0, 0, 0, 162.667, 56.6667, 0, 0, 0, 0, 200, 56.6667, 0, 0, 0, 0, 200, 2.66666, 0, 0, 0, 0, 479.333, 3.33333)
+}
+point_count = 6
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2bn35"]
+atlas = ExtResource("1_ora2m")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0kpbe"]
+atlas = ExtResource("1_ora2m")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p08kf"]
+atlas = ExtResource("1_ora2m")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mlilu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2bn35")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0kpbe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p08kf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ey8cf"]
+
+[node name="RunningRat" type="CharacterBody2D"]
+script = ExtResource("1_lwcge")
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_rros3")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(0, 2)
+rotation = 0.00406498
+loop = false
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Path2D/PathFollow2D"]
+texture_filter = 1
+position = Vector2(0, -2)
+sprite_frames = SubResource("SpriteFrames_mlilu")
+autoplay = "default"
+frame_progress = 0.17138
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ey8cf")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.25
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

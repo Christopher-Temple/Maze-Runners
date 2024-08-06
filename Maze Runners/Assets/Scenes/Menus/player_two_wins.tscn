@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbmusn0ufyv2y"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/UI/player_two_wins.gd" id="1_kifg3"]
+[ext_resource type="Theme" uid="uid://cyvuq0oiuvgij" path="res://Assets/Fonts/MyTheme.tres" id="2_tvesb"]
+
+[node name="PlayerTwoWins" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kifg3")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -21.0
+offset_top = -20.0
+offset_right = 1177.0
+offset_bottom = 666.0
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 249.0
+offset_top = 107.0
+offset_right = 961.0
+offset_bottom = 194.0
+theme = ExtResource("2_tvesb")
+theme_override_colors/default_color = Color(0.984314, 1, 0, 1)
+theme_override_font_sizes/normal_font_size = 80
+text = "Player Two wins!"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="."]
+offset_left = 449.0
+offset_top = 244.0
+offset_right = 707.0
+offset_bottom = 325.0
+theme = ExtResource("2_tvesb")
+text = "Current Score"
+
+[node name="P2Score" type="RichTextLabel" parent="."]
+offset_left = 676.0
+offset_top = 338.0
+offset_right = 934.0
+offset_bottom = 419.0
+theme = ExtResource("2_tvesb")
+
+[node name="P1Score" type="RichTextLabel" parent="."]
+offset_left = 193.0
+offset_top = 338.0
+offset_right = 451.0
+offset_bottom = 419.0
+theme = ExtResource("2_tvesb")
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

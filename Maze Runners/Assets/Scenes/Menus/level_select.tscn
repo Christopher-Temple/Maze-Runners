@@ -1,0 +1,379 @@
+[gd_scene load_steps=3 format=3 uid="uid://wh7bdswq5ip4"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/UI/autoload_variables.gd" id="1_3c241"]
+[ext_resource type="Theme" uid="uid://cyvuq0oiuvgij" path="res://Assets/Fonts/MyTheme.tres" id="1_gtdy1"]
+
+[node name="LevelSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3c241")
+
+[node name="MainContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Small" type="HBoxContainer" parent="MainContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SmallMazes" type="VBoxContainer" parent="MainContainer/Small"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+alignment = 1
+
+[node name="Hidden" type="RichTextLabel" parent="MainContainer/Small/SmallMazes"]
+light_mask = 0
+visibility_layer = 0
+layout_mode = 2
+bbcode_enabled = true
+text = "[center]Hidden[/center]"
+fit_content = true
+
+[node name="Hidden2" type="RichTextLabel" parent="MainContainer/Small/SmallMazes"]
+light_mask = 0
+visibility_layer = 0
+layout_mode = 2
+bbcode_enabled = true
+text = "[center]Hidden[/center]"
+fit_content = true
+
+[node name="Hidden3" type="RichTextLabel" parent="MainContainer/Small/SmallMazes"]
+light_mask = 0
+visibility_layer = 0
+layout_mode = 2
+bbcode_enabled = true
+text = "[center]Hidden[/center]"
+fit_content = true
+
+[node name="SmallMaps" type="RichTextLabel" parent="MainContainer/Small/SmallMazes"]
+texture_filter = 1
+layout_mode = 2
+theme = ExtResource("1_gtdy1")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[center]CHOOSE YOUR MAZE[/center]
+"
+fit_content = true
+
+[node name="Level1" type="Button" parent="MainContainer/Small/SmallMazes"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_top = NodePath("../Level5")
+focus_neighbor_bottom = NodePath("../Level2")
+theme = ExtResource("1_gtdy1")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+text = "LEVEL 1"
+flat = true
+
+[node name="Level2" type="Button" parent="MainContainer/Small/SmallMazes"]
+layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_top = NodePath("../Level1")
+focus_neighbor_bottom = NodePath("../Level3")
+theme = ExtResource("1_gtdy1")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+action_mode = 0
+text = "LEVEL 2"
+flat = true
+
+[node name="Level3" type="Button" parent="MainContainer/Small/SmallMazes"]
+layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_top = NodePath("../Level2")
+focus_neighbor_bottom = NodePath("../Level4")
+theme = ExtResource("1_gtdy1")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+action_mode = 0
+text = "LEVEL 3"
+flat = true
+
+[node name="Level4" type="Button" parent="MainContainer/Small/SmallMazes"]
+layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_top = NodePath("../Level3")
+focus_neighbor_bottom = NodePath("../Level5")
+theme = ExtResource("1_gtdy1")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+text = "LEVEL 4"
+flat = true
+
+[node name="Level5" type="Button" parent="MainContainer/Small/SmallMazes"]
+layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_top = NodePath("../Level4")
+focus_neighbor_bottom = NodePath("../Level1")
+theme = ExtResource("1_gtdy1")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+text = "LEVEL 5"
+flat = true
+
+[node name="Medium" type="HBoxContainer" parent="MainContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="MediumMazes" type="VBoxContainer" parent="MainContainer/Medium"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme = ExtResource("1_gtdy1")
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="Hidden" type="RichTextLabel" parent="MainContainer/Medium/MediumMazes"]
+light_mask = 0
+visibility_layer = 0
+layout_mode = 2
+bbcode_enabled = true
+text = "[center]Hidden[/center]"
+fit_content = true
+
+[node name="Hidden2" type="RichTextLabel" parent="MainContainer/Medium/MediumMazes"]
+light_mask = 0
+visibility_layer = 0
+layout_mode = 2
+bbcode_enabled = true
+text = "[center]Hidden[/center]"
+fit_content = true
+
+[node name="Hidden3" type="RichTextLabel" parent="MainContainer/Medium/MediumMazes"]
+light_mask = 0
+visibility_layer = 0
+layout_mode = 2
+bbcode_enabled = true
+text = "[center]Hidden[/center]"
+fit_content = true
+
+[node name="MediumMaps" type="RichTextLabel" parent="MainContainer/Medium/MediumMazes"]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[center]Medium Maps[/center]"
+fit_content = true
+
+[node name="Level6" type="Button" parent="MainContainer/Medium/MediumMazes"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_left = NodePath("../../../Small/SmallMazes/Level1")
+focus_neighbor_top = NodePath("../../../Small/SmallMazes/Level5")
+focus_neighbor_right = NodePath("../../../Large/LargeMazes/Level11")
+focus_neighbor_bottom = NodePath("../Level7")
+theme = ExtResource("1_gtdy1")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+text = "LEVEL 6"
+flat = true
+
+[node name="Level7" type="Button" parent="MainContainer/Medium/MediumMazes"]
+layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_left = NodePath("../../../Small/SmallMazes/Level2")
+focus_neighbor_top = NodePath("../Level6")
+focus_neighbor_right = NodePath("../../../Large/LargeMazes/Level12")
+focus_neighbor_bottom = NodePath("../Level8")
+theme = ExtResource("1_gtdy1")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+text = "LEVEL 7"
+flat = true
+
+[node name="Level8" type="Button" parent="MainContainer/Medium/MediumMazes"]
+layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_left = NodePath("../../../Small/SmallMazes/Level3")
+focus_neighbor_top = NodePath("../Level7")
+focus_neighbor_right = NodePath("../../../Large/LargeMazes/Level13")
+focus_neighbor_bottom = NodePath("../Level9")
+theme = ExtResource("1_gtdy1")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+text = "LEVEL 8"
+flat = true
+
+[node name="Level9" type="Button" parent="MainContainer/Medium/MediumMazes"]
+layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_left = NodePath("../../../Small/SmallMazes/Level4")
+focus_neighbor_top = NodePath("../Level8")
+focus_neighbor_right = NodePath("../../../Large/LargeMazes/Level14")
+focus_neighbor_bottom = NodePath("../Level10")
+theme = ExtResource("1_gtdy1")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+text = "LEVEL 9"
+flat = true
+
+[node name="Level10" type="Button" parent="MainContainer/Medium/MediumMazes"]
+layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_left = NodePath("../../../Small/SmallMazes/Level5")
+focus_neighbor_top = NodePath("../Level9")
+focus_neighbor_right = NodePath("../../../Large/LargeMazes/Level15")
+focus_neighbor_bottom = NodePath("../../../Large/LargeMazes/Level11")
+theme = ExtResource("1_gtdy1")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+text = "LEVEL 10"
+flat = true
+
+[node name="Large" type="HBoxContainer" parent="MainContainer"]
+visible = false
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LargeMazes" type="VBoxContainer" parent="MainContainer/Large"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+alignment = 1
+
+[node name="Hidden" type="RichTextLabel" parent="MainContainer/Large/LargeMazes"]
+light_mask = 0
+visibility_layer = 0
+layout_mode = 2
+bbcode_enabled = true
+text = "[center]Hidden[/center]"
+fit_content = true
+
+[node name="Hidden2" type="RichTextLabel" parent="MainContainer/Large/LargeMazes"]
+light_mask = 0
+visibility_layer = 0
+layout_mode = 2
+bbcode_enabled = true
+text = "[center]Hidden[/center]"
+fit_content = true
+
+[node name="Hidden3" type="RichTextLabel" parent="MainContainer/Large/LargeMazes"]
+light_mask = 0
+visibility_layer = 0
+layout_mode = 2
+bbcode_enabled = true
+text = "[center]Hidden[/center]"
+fit_content = true
+
+[node name="LargeMaps" type="RichTextLabel" parent="MainContainer/Large/LargeMazes"]
+layout_mode = 2
+theme = ExtResource("1_gtdy1")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[center]Large Maps[/center]"
+fit_content = true
+
+[node name="Level11" type="Button" parent="MainContainer/Large/LargeMazes"]
+layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_left = NodePath("../../../Medium/MediumMazes/Level6")
+focus_neighbor_top = NodePath("../../../Medium/MediumMazes/Level10")
+focus_neighbor_right = NodePath("../../../Small/SmallMazes/Level1")
+focus_neighbor_bottom = NodePath("../Level12")
+theme = ExtResource("1_gtdy1")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+text = "LEVEL 11"
+flat = true
+
+[node name="Level12" type="Button" parent="MainContainer/Large/LargeMazes"]
+layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_left = NodePath("../../../Medium/MediumMazes/Level7")
+focus_neighbor_top = NodePath("../Level11")
+focus_neighbor_right = NodePath("../../../Small/SmallMazes/Level2")
+focus_neighbor_bottom = NodePath("../Level13")
+theme = ExtResource("1_gtdy1")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+text = "LEVEL 12"
+flat = true
+
+[node name="Level13" type="Button" parent="MainContainer/Large/LargeMazes"]
+layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_left = NodePath("../../../Medium/MediumMazes/Level8")
+focus_neighbor_top = NodePath("../Level12")
+focus_neighbor_right = NodePath("../../../Small/SmallMazes/Level3")
+focus_neighbor_bottom = NodePath("../Level14")
+theme = ExtResource("1_gtdy1")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+text = "LEVEL 13"
+flat = true
+
+[node name="Level14" type="Button" parent="MainContainer/Large/LargeMazes"]
+layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_left = NodePath("../../../Medium/MediumMazes/Level9")
+focus_neighbor_top = NodePath("../Level13")
+focus_neighbor_right = NodePath("../../../Small/SmallMazes/Level4")
+focus_neighbor_bottom = NodePath("../Level15")
+theme = ExtResource("1_gtdy1")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+text = "LEVEL 14"
+flat = true
+
+[node name="Level15" type="Button" parent="MainContainer/Large/LargeMazes"]
+layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_left = NodePath("../../../Medium/MediumMazes/Level10")
+focus_neighbor_top = NodePath("../Level14")
+focus_neighbor_right = NodePath("../../../Small/SmallMazes/Level5")
+focus_neighbor_bottom = NodePath("../../../Small/SmallMazes/Level1")
+theme = ExtResource("1_gtdy1")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+text = "LEVEL 15"
+flat = true
+
+[connection signal="mouse_entered" from="MainContainer/Small/SmallMazes/Level1" to="." method="_on_level_1_mouse_entered"]
+[connection signal="pressed" from="MainContainer/Small/SmallMazes/Level1" to="." method="_on_level_1_pressed"]
+[connection signal="mouse_entered" from="MainContainer/Small/SmallMazes/Level2" to="." method="_on_level_2_mouse_entered"]
+[connection signal="pressed" from="MainContainer/Small/SmallMazes/Level2" to="." method="_on_level_2_pressed"]
+[connection signal="mouse_entered" from="MainContainer/Small/SmallMazes/Level3" to="." method="_on_level_3_mouse_entered"]
+[connection signal="pressed" from="MainContainer/Small/SmallMazes/Level3" to="." method="_on_level_3_pressed"]
+[connection signal="mouse_entered" from="MainContainer/Small/SmallMazes/Level4" to="." method="_on_level_4_mouse_entered"]
+[connection signal="pressed" from="MainContainer/Small/SmallMazes/Level4" to="." method="_on_level_4_pressed"]
+[connection signal="mouse_entered" from="MainContainer/Small/SmallMazes/Level5" to="." method="_on_level_5_mouse_entered"]
+[connection signal="pressed" from="MainContainer/Small/SmallMazes/Level5" to="." method="_on_level_5_pressed"]
+[connection signal="mouse_entered" from="MainContainer/Medium/MediumMazes/Level6" to="." method="_on_level_6_mouse_entered"]
+[connection signal="pressed" from="MainContainer/Medium/MediumMazes/Level6" to="." method="_on_level_6_pressed"]
+[connection signal="mouse_entered" from="MainContainer/Medium/MediumMazes/Level7" to="." method="_on_level_7_mouse_entered"]
+[connection signal="pressed" from="MainContainer/Medium/MediumMazes/Level7" to="." method="_on_level_7_pressed"]
+[connection signal="mouse_entered" from="MainContainer/Medium/MediumMazes/Level8" to="." method="_on_level_8_mouse_entered"]
+[connection signal="pressed" from="MainContainer/Medium/MediumMazes/Level8" to="." method="_on_level_8_pressed"]
+[connection signal="mouse_entered" from="MainContainer/Medium/MediumMazes/Level9" to="." method="_on_level_9_mouse_entered"]
+[connection signal="pressed" from="MainContainer/Medium/MediumMazes/Level9" to="." method="_on_level_9_pressed"]
+[connection signal="mouse_entered" from="MainContainer/Medium/MediumMazes/Level10" to="." method="_on_level_10_mouse_entered"]
+[connection signal="pressed" from="MainContainer/Medium/MediumMazes/Level10" to="." method="_on_level_10_pressed"]
+[connection signal="mouse_entered" from="MainContainer/Large/LargeMazes/Level11" to="." method="_on_level_11_mouse_entered"]
+[connection signal="pressed" from="MainContainer/Large/LargeMazes/Level11" to="." method="_on_level_11_pressed"]
+[connection signal="mouse_entered" from="MainContainer/Large/LargeMazes/Level12" to="." method="_on_level_12_mouse_entered"]
+[connection signal="pressed" from="MainContainer/Large/LargeMazes/Level12" to="." method="_on_level_12_pressed"]
+[connection signal="mouse_entered" from="MainContainer/Large/LargeMazes/Level13" to="." method="_on_level_13_mouse_entered"]
+[connection signal="pressed" from="MainContainer/Large/LargeMazes/Level13" to="." method="_on_level_13_pressed"]
+[connection signal="mouse_entered" from="MainContainer/Large/LargeMazes/Level14" to="." method="_on_level_14_mouse_entered"]
+[connection signal="pressed" from="MainContainer/Large/LargeMazes/Level14" to="." method="_on_level_14_pressed"]
+[connection signal="mouse_entered" from="MainContainer/Large/LargeMazes/Level15" to="." method="_on_level_15_mouse_entered"]
+[connection signal="pressed" from="MainContainer/Large/LargeMazes/Level15" to="." method="_on_level_15_pressed"]

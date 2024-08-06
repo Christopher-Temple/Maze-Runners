@@ -1,0 +1,45 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://cyvuq0oiuvgij"]
+
+[ext_resource type="FontFile" uid="uid://dsrtmsxxx8atp" path="res://Assets/Fonts/grapple.ttf" id="1_5j051"]
+[ext_resource type="FontFile" uid="uid://bu84ja61gifml" path="res://Assets/Fonts/FunGroovy-1GB12.ttf" id="2_6cb30"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_goed0"]
+
+[resource]
+default_font = ExtResource("2_6cb30")
+default_font_size = 30
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_focus_color = Color(1, 0.945098, 0.466667, 1)
+Button/colors/font_hover_color = Color(1, 0.945098, 0.466667, 1)
+Button/constants/outline_size = 5
+Button/styles/focus = SubResource("StyleBoxEmpty_goed0")
+Button/styles/pressed = null
+RichTextLabel/colors/default_color = Color(1, 1, 1, 1)
+RichTextLabel/colors/font_outline_color = Color(0, 0, 0, 1)
+RichTextLabel/colors/font_selected_color = Color(0.831373, 0.831373, 0.501961, 1)
+RichTextLabel/colors/font_shadow_color = Color(0, 0, 0, 1)
+RichTextLabel/colors/selection_color = Color(0, 0, 0, 1)
+RichTextLabel/colors/table_border = Color(0, 0, 0, 1)
+RichTextLabel/colors/table_even_row_bg = Color(0, 0, 0, 1)
+RichTextLabel/colors/table_odd_row_bg = Color(0, 0, 0, 1)
+RichTextLabel/constants/line_separation = 0
+RichTextLabel/constants/outline_size = 5
+RichTextLabel/constants/shadow_offset_x = 0
+RichTextLabel/constants/shadow_offset_y = 0
+RichTextLabel/constants/shadow_outline_size = 0
+RichTextLabel/constants/table_h_separation = 0
+RichTextLabel/constants/table_v_separation = 0
+RichTextLabel/constants/text_highlight_h_padding = 0
+RichTextLabel/constants/text_highlight_v_padding = 0
+RichTextLabel/font_sizes/bold_font_size = 30
+RichTextLabel/font_sizes/bold_italics_font_size = 30
+RichTextLabel/font_sizes/italics_font_size = 30
+RichTextLabel/font_sizes/mono_font_size = 30
+RichTextLabel/font_sizes/normal_font_size = 30
+RichTextLabel/fonts/bold_font = ExtResource("1_5j051")
+RichTextLabel/fonts/bold_italics_font = ExtResource("1_5j051")
+RichTextLabel/fonts/italics_font = ExtResource("1_5j051")
+RichTextLabel/fonts/mono_font = ExtResource("1_5j051")
+RichTextLabel/fonts/normal_font = ExtResource("1_5j051")
+RichTextLabel/styles/focus = null
+RichTextLabel/styles/normal = null
